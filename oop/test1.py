@@ -14,7 +14,7 @@ class BankAccount:
     @owner.setter
     def owner(self, new_owner):
         if new_owner == '':
-            print('Имя владельца не должно быть пустым')
+            print('Имя владельца не должно быть пустым') #ВАЛИДАЦИЯ ИМЕНИ, ЧТОБЫ НЕ ПИСАЛИ ЧЕПУХУ
         else:
             self.__owner = new_owner
 
@@ -40,6 +40,7 @@ class BankAccount:
 acc = BankAccount('Александр', 1000)
 print(acc.deposit(500))
 print(acc.balance)
+print(acc.withdraw(100))
 
 acc.owner = 'Дима'
 print(acc.owner)
